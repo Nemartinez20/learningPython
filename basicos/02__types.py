@@ -27,8 +27,24 @@ print(3.1415)
 print(-1.34)
 print(14.324239123791283012)
 
-# Tipo de numero decimales o float
+# Tipo de dato complex complejo
 print('complex:=======================')
 print(1 + 3j)
 print(3.1415)
 
+# Tipo de dato string
+print('string:=======================')
+print(type('hola mundo soy un string'))
+print(type(''))
+print(type(""""""))
+print(type('1234'))
+
+# Tipo de dato booleans
+print('bool:=======================')
+print(type(true))
+print(type(false))
+
+# Tipo de dato de ausencia
+print('ausencia:=======================')
+print(type(None))
+print(None)
