@@ -139,3 +139,11 @@ remplazoEj7 = 'Adios'
 
 textoNuevoEj7 = re.sub(patronEj7, remplazoEj7, textoEj7)
 print(textoNuevoEj7)
+
+## con mas paramentros al re
+
+#textoNuevo = re.sub(textoAbuscar, textoPorElCulSeRemplaza, texto, ccontador , flags=re.IGNORECASE)
+#contador = 0  === si el contador es cero se remplazan todas
+# contador en 1 se remplazan solo la primero y si es 2 se remplazan las dos primeras y asi susesivamente
+textoNuevo = re.sub(patronEj7, remplazoEj7, textoEj7, count= 1, flags=re.IGNORECASE)
+print(textoNuevo)
