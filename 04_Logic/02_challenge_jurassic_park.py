@@ -9,13 +9,15 @@ Escribe una función en Python que reciba una lista de números enteros y devuel
 
 
 lista = [2,3,4,5,6,7,8,9,10,23,45,23,22,24,26]
-def conatrHuevos(lis):
+
+
+def conatrHuevos(list_eggs):
     total = 0
 
-    for unalist in lis :
-        if unalist % 2 == 0:
-            print(unalist)
-            total = total + unalist
+    for huevo in list_eggs :
+        if huevo % 2 == 0:
+            print(huevo)
+            total = total + huevo
     return total
         
     
