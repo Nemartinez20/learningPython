@@ -49,3 +49,23 @@ patron5= r'\b[om]an\b'
 
 rta5= re.findall(patron5, texto5)
 print(rta5)
+
+text = "22"
+pattern = r"[4-9]"
+
+matches = re.findall(pattern, text)
+print(matches)
+
+
+# Ejercicio final con todo lo aprendido
+# Mejorar esto: https://www.computerhope.com/jargon/r/regular-expression.png
+
+## Buscar corner cases que no pasa y arreglarlo:
+"lo.que+sea@shopping.online"
+"michael@gov.co.uk"
+
+# [^]: Coincide con cualquier caracter que no esté dentro de los corchetes
+text = "Hola mundo"
+pattern = r"[^aeiou]"
+matches = re.findall(pattern, text)
+print(matches)
