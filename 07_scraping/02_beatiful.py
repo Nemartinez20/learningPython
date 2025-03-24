@@ -26,3 +26,31 @@ if response.status_code == 200:
     title_soup = sopa.title
     if title_soup:
         print(title_soup)
+        print(title_soup.string)
+        #Buscando todos los metas
+        metas = sopa.title.parent.find_all('meta')
+        print(metas)
+
+    #
+    price_span = sopa.find('span', class_='rc-prices-fullprice')
+
+    if price_span:
+        print(f'El precio es: {price_span.string}')
+
+    # Buscarndo todos loprecios
+    price_spanAll = sopa.find_all('span', class_='rc-prices-fullprice')
+    for price in price_spanAll:
+        print(f'el precio del proucto es: {price}')
+
+
+    productos = sopa.find_all(class_='rc-productselection-item')
+
+    for product in productos:
+        name = product.find(class_='list-title')
+        print(name)
+        print('=====================')
+        nombre =  product.find(class_='list-title').text
+        precio =  product.find(class_='rc-prices-fullprice').text
+
+        print(f'El producto : {nombre} y su precio es:{precio}')
+        print('********************************')
