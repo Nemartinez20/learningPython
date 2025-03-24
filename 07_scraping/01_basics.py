@@ -27,3 +27,8 @@ if response.status_code == 200:
 
     if buscar:
         print(f"El precio del producto es: {buscar.group(1)}")
+    # Obtener el titulo de la web
+    title_pattern = r'<title>(.*?)</title>'
+    buscarTitle = re.search(title_pattern, html)
+    if buscarTitle:
+        print(f"El titulo de la web es: {buscarTitle.group(1)}")
