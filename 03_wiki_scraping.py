@@ -39,10 +39,22 @@ def scrape_url(url:str):
 
         #recuperar el texto del maain
         main = sopa.find('main').get_text()
-        print(main)
+        #print(main)
+
+        # de un div en especial - pasandole el id del div
+        #div = sopa.find('div', {'id': 'mw-content-text'}).get_text()
+        #print(div)
+
+        # Extraer el open graph si existe
+        og_image = sopa.find('meta',{'property':'og:image'})
+        if og_image:
+            print(og_image['content'])
+        else:
+            print('No se encontro la imagen')
 
 
 
 # Llamar a la funcion
-url ='https://es.wikipedia.org/wiki/Web_scraping'
+#url ='https://es.wikipedia.org/wiki/Web_scraping'
+url ='https://midu.dev'
 scrape_url(url)
